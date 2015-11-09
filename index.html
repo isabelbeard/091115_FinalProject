@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="utf-8">
+    <title>The Gender Wage Gap</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+    <div class="navigation">
+      <a href="#" class="gwg" id="logo">The Gender Wage Gap</a>
+      <a href="#" class="asteric" id="asteric">*</a>
+    </div>
+
+    <div id="fullpage">
+      <section id ="section0" class="section0">
+        <div class="about">
+          <h2>sources</h2>
+          <p class="aboutp"><span class="bold">Gender Wage Gap Data: </span>US Department of Labor; Bureau of Labor Statistics via <a href="http://www.informationisbeautiful.net/visualizations/gender-pay-gap-us/" target="blank" class="underlinea">Information is Beautiful</a></p><br>
+          <p class="aboutp"><span class="bold">Days worked per year: </span>Organisation for Economic Co-operation and Development; <a href="https://stats.oecd.org/Index.aspx?DataSetCode=ANHRS" target="blank" class="underlinea">Average Work Year</a></p><br>
+          <p class="aboutp"><span class="bold">Hourly work day: </span>Organisation for Economic Co-operation and Development; <a href="https://stats.oecd.org/Index.aspx?DataSetCode=ANHRS" target="blank" class="underlinea">Average Work Week</a></p><br>
+          <p class="aboutp"><span class="bold">Average cost of house in Brooklyn: </span>DNAinfo; <a href="http://www.dnainfo.com/new-york/20150709/park-slope/average-home-prices-brooklyn-queens-hit-new-record-highs" target="blank" class="underlinea">Average Home Prices in Brooklyn and Queens Hit Record Highs</a></p><br>
+          <p class="aboutp"><span class="bold">Average cost of Nikes: </span>Market Realist; <a href="http://marketrealist.com/2014/12/growth-factors-spiking-nike-revenues-earnings/" target="blank" class="underlinea">The Growth Factors Spiking NIKE Revenues And Earnings</a></p><br>
+          <p class="aboutp"><span class="bold">Average cost of Bike: </span>Forbes; <a href="http://www.forbes.com/sites/moneybuilder/2011/06/15/the-costs-and-savings-of-bicycle-commuting/" target="blank" class="underlinea">The Costs and Savings of Bicycle Commuting</a></p><br>
+          <a href="#" class="arrow" id="arrow"><img src="images/arrow.svg" alt="arrow" class="arrow-button"/></a>
+        </div>
+      </section>
+
+      <section id ="section1">
+        <div class= "homepage">
+            <h1>The Gender<br>Wage Gap</h1>
+            <p>Use the drop down menus on the next page to choose an occupation and an object to see how long it would take a woman and man to earn enough money to buy that object in the chosen profession. <br> <br> Calculations are based on the US 2014 average of a 7.72 hour work day for 270 days a year.</p>
+            <div class="white-line"> </div>
+            <p class="sub-p">Use the asteric in the right corner to  view sources.
+            </p>
+            <button type="button" name="button" id="next">Start</button>
+        </div>
+      </section>
+
+      <!-- Drop down of selectors will go here with a submit button -->
+      <section id ="section2">
+        <div class="drop-down-selection cf slide"  name="slide1" id="slide1">
+          <form id="gender-gap-form1">
+            <div id="#dd1" class="choose-a-something-dd">
+              <select class="js-professionselect selectprof2" id="gender-gap-form1-profession">
+                <option id="replaced" value="" disabled selected>Select a Profession</option>
+                <!-- add in data dynamically from 'car' variable -->
+               </select>
+            </div>
+
+            <div id="#dd2" class="choose-a-something-dd">
+              <select id="gender-gap-form1-item" class="js-objectselect object2select">
+                <option value="" disabled selected>Select an object</option>
+                <option value="house">House in Brooklyn: $788,529.00</option>
+                <option value="nike">Pair of Nike Shoes: $76.54</option>
+                <option value="car">Bike with Accessories: $1,112.00</option>
+              </select>
+            </div>
+            <input type="submit" name="submit" value="submit" id="submit1">
+          </form>
+          <p class="please-select hidden">Please select a profession and an object!</p>
+        </div>
+
+      </section>
+
+      <!-- Page of selected items and data output -->
+      <section id ="section3">
+        <div class="selected-page cf slide" name="slide2" id="slide2">
+          <form id="gender-gap-form2">
+            <div id="#dd1" class="choose-a-something-dd">
+              <select class="js-professionselect selectprof2" id="gender-gap-form2-profession">
+                <option id ="replaced" value="" disabled selected>Select a Profession</option>
+                <!-- add in data dynamically from 'car' variable -->
+              </select>
+            </div>
+
+            <div id="#dd2" class="choose-a-something-dd">
+              <select id="gender-gap-form2-item" class="js-objectselect object2select">
+                <option value="" disabled selected>Select an object</option>
+                <option value="house">House in Brooklyn: $788,529.00</option>
+                <option value="nike">Pair of Nike Shoes: $76.54</option>
+                <option value="car">Bike: $1,112.00</option>
+              </select>
+            </div>
+          </form>
+        <!-- Men vs Women -->
+          <div class="menvwomen">
+          <div class="mens-side cf">
+            <div class="mens-time-to-buy">
+              <h4 id="menstime">00:00:00:00:00</h4>
+              <h3>years : days : hours : minutes : seconds<h3>
+            </div>
+
+            <div class="mens-yearly-salary">
+              <h4 id="menssalary">salary</h4>
+              <h3>mens yearly salary</h3>
+            </div>
+
+            <div class="mens-percentage">
+              <h4 id="menspercent">100%</h4>
+              <h3>percentage</h3>
+            </div>
+          </div>
+
+          <img src="images/house.png" alt="placeholder" class="object-image"/>
+
+          <div class="womens-side cf">
+            <div class="womens-h4-to-buy">
+              <h4 id="womenstime">00:00:00:00:00</h4>
+              <h3>years : days : hours : minutes : seconds<h3>
+            </div>
+
+            <div class="womens-yearly-salary">
+              <h4 id="womenssalary">salary</h4>
+              <h3>womens yearly salary</h3>
+            </div>
+
+            <div class="womens-percentage">
+              <h4 id="womenspercent">80%</h4>
+              <h3>percentage</h3>
+            </div>
+          </div>
+        </div>
+          <div class="divider"> </div>
+        </div>
+      </section>
+
+    </div>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+    <script src="js/jquery.shadowtext.js"></script>
+
+    <script type="text/javascript" src="json/gender-wage-gap-car.js"></script>
+    <script type="text/javascript" src="json/gender-wage-gap-house.js"></script>
+    <script type="text/javascript" src="json/gender-wage-gap-nike.js"></script>
+    <script type="text/javascript" src="json/salary.js"></script>
+
+    <script src="js/style.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
